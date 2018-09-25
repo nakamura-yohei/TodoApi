@@ -42,7 +42,7 @@ namespace TodoApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(TodoItem item)
+        public ActionResult<TodoItem> Create(TodoItem item)
         {
             _context.TodoItems.Add(item);
             _context.SaveChanges();
